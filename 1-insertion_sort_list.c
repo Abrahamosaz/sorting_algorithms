@@ -44,10 +44,10 @@ void insertion_sort_list(listint_t **list)
 
 	for (; dir; dir = dir->next)
 	{
-		for (i = dir; i->prev && i->prev->n > i->n; i = i->prev)
+		for (i = dir; i->prev && i->prev->n > i->n;)
 		{
 			swap(list, i->prev, i);
-			i = i->next;
+			/* i = i->next;*/
 			print_list(*list);
 		}
 	}
